@@ -1,4 +1,4 @@
-# Exercício 1 - Comandos Ad hoc
+# Exercício 1 - Comandos ad-hoc e Playbooks
 
 ## Introdução
 Este diretório contém consigo um arquivo ansible.cfg e um arquivo inventory. Estes devem ser populados com os valores de máquinas criadas em seu ambiente.
