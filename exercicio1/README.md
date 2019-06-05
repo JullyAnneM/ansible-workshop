@@ -30,9 +30,11 @@ Instalando apache:
 ``` ansible web -m yum -a 'name=httpd state=present' ```
 
 Criando arquivo index.html populado em /var/www/html:
+
 ``` ansible web -m copy -a 'content="Seja bem-vindo ao servidor {{ ansible_hostname }}" dest=/var/www/html/index.html' ```
 
 Habilitando apache:
+
 ``` ansible web -m service -a 'name=httpd state=started enabled=true' ```
 
 Pode-se observar que os comandos acima descrevem exatamente como o módulos se comportariam em um Playbook. Para maiores informações sobre o módulo e seus atributos, basta usar a *ansible-doc*.
