@@ -1,3 +1,4 @@
+# Exercício 1 - Comandos Ad hoc
 ### Testando conectividade com host 
 Vamos começar com algo básico - pingar um host. O módulo ping testa a capacidade de resposta do nosso host.
 
