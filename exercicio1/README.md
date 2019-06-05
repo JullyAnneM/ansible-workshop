@@ -25,8 +25,14 @@ E para restringir a saída com um valor específico a ser procurado, basta usar 
 ### Rodando comando ad hoc
 É possível rodar qualquer módulo Ansible desenvolvido pela comunidade como um comando ad hoc.
 
+Instalando apache:
+
 ``` ansible web -m yum -a 'name=httpd state=present' ```
+
+Criando arquivo index.html populado em /var/www/html:
 ``` ansible web -m copy -a 'content="Seja bem-vindo ao servidor {{ ansible_hostname }}" dest=/var/www/html/index.html' ```
+
+Habilitando apache:
 ``` ansible web -m service -a 'name=httpd state=started enabled=true' ```
 
 Pode-se observar que os comandos acima descrevem exatamente como o módulos se comportariam em um Playbook. Para maiores informações sobre o módulo e seus atributos, basta usar a *ansible-doc*.
@@ -67,5 +73,5 @@ A partir disso, as tarefas de instalação do pacote apache, criação de index.
         enabled: true
 ``` 
 
-### Testando página Apache em host 
+### Testando página html em host 
 Para testar se o playbook executou como esperado, basta logar-se ao host alvo da automação e usar o comando *curl* no IP ou hostname da máquina.
